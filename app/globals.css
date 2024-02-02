@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:wght@400;600;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-color: rgb(241,237,254);
+  --primary-color: rgb(113,67,235);
+  --secondary-color: rgb(217,201,255);
+  --light-text: rgb(75,85,99);
+  
+  --light-color: rgb(252,251,255);
+  --dark-color: rgb(0,0,0);
+
+  --dark-primary: rgb(25,29,43);
+  --dark-secondary: rgb(42,46,53);
+  --dark-text: rgb(209,213,219);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 10px;
+}
+
+html {
+  @apply text-sm lg:text-base;
+}
+
+body {
+  @apply bg-background-color dark:bg-dark-primary;
+}
+
+li {
+  @apply list-none
+}
+
+a, i {
+  @apply cursor-pointer
+}
+
+
+/* TITLE */
+
+.subtitle {
+  @apply text-xl dark:text-light-color lg:text-2xl font-abril tracking-wider font-bold mb-6 uppercase relative inline-block before:absolute before:content-[""] before:left-0 before:right-0 before:-bottom-1 before:w-full before:h-[3px] before:bg-primary-color;
+}
+
+
+/* CONTACT */
+
+form input {
+  @apply px-3 py-2 leading-10 rounded-tr-2xl rounded-br-2xl w-full border-opacity-40 bg-light-color dark:bg-dark-secondary dark:text-dark-text shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] outline-none;
+}
+
+form .input-field {
+  @apply w-full flex justify-center items-center bg-secondary-color dark:bg-primary-color rounded-2xl;
+}
+
+form i {
+  @apply px-4 text-lg text-primary-color dark:text-secondary-color;
+}
